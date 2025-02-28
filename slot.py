@@ -37,7 +37,7 @@ def login():
 def booking_page():
     if 'user' not in session:
         return redirect(url_for('login'))
-    return render_template('index.html', slots=slots)
+    return render_template('page.html', slots=slots)
 
 @app.route('/book', methods=['POST'])
 def book():
